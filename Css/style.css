@@ -6,10 +6,10 @@
     
     --main-color: #FA9352;
     --black-web: #121217;
-    --gradient: linear-gradient(90deg, hsl(38, 100%, 98%) 21.32%, hsl(144, 45%, 98%) 130%);
+    --gradient: linear-gradient(90deg, #fffbf5 21.32%, #f8fcf9 130%);
     --light-color: #6f6f76;
     --light-black: #3b3b3b;
-    --main-shadow: 5px 10px 30px hsla(39, 100%, 50%, 0.3);
+    --main-shadow: 5px 10px 30px #ffa6004d;
     
     /* Fonts */
 
@@ -617,6 +617,12 @@ header .content .menue {
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    transition: 0.3s;
+}
+
+.instructor .content .instructor-card:hover {
+    transform: translateY(-70px);
+    scale: 1.1;
 }
 
 .instructor .content .instructor-card .card-text .card-text {
@@ -815,6 +821,37 @@ header .content .menue {
     text-align: center;
     padding: 20px;
     border-top: 1px solid var(--light-black);
+}
+
+/* Scroll To Top */
+.top {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: var(--main-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.top:hover {
+    background-color: var(--light-black);
+    box-shadow: 0 0 10px rgba(165, 165, 165, 0.945);
+    rotate: 0;
+}
+
+.top.hide {
+    transform: translate(100px, 100px);
+    rotate: 45deg;
+}
+
+.top i {
+    color: #FFF;
 }
 
 /* The End, Created By Yousef Ahmed In 2023 */
