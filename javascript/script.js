@@ -20,9 +20,15 @@ closeButton.addEventListener("click", () => {
 let topBtn = document.querySelector('.top');
 
 window.onscroll = () => {
-    document.documentElement.scrollTop >= 800 ? topBtn.classList.remove('hide') : topBtn.classList.add('hide');
+    check();
 };
 
 topBtn.onclick = () => {
     document.documentElement.scrollTo({top : 0, behavior: "smooth"})
 };
+
+function check() {
+    document.documentElement.scrollTop >= 800 ? topBtn.classList.remove('hide') : topBtn.classList.add('hide');
+};
+
+check();
